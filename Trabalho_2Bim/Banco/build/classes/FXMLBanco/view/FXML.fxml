@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="22.0" prefHeight="500.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLBanco.controller.BancoController">
+  <children>
+    <TabPane layoutX="-3.0" layoutY="-2.0" prefHeight="500.0" prefWidth="919.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+            <Tab text="Login">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="322.0" layoutY="43.0" prefHeight="33.0" prefWidth="137.0" text="Login">
+                           <font>
+                              <Font size="51.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="logintext" layoutX="273.0" layoutY="180.0" prefHeight="33.0" prefWidth="272.0" />
+                        <Label layoutX="153.0" layoutY="182.0" prefHeight="29.0" prefWidth="79.0" text="Nome">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="loginbutton" layoutX="322.0" layoutY="264.0" mnemonicParsing="false" text="Entrar" />
+                        <Button fx:id="logoutbutton" layoutX="433.0" layoutY="264.0" mnemonicParsing="false" text="Sair" />
+                        <Label layoutX="273.0" layoutY="140.0" text="Nome Teste: Luiz">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        <Tab fx:id="tabCadastro" text="Cadastro">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="467.0" prefWidth="649.0">
+              <children>
+                <AnchorPane layoutX="0.0" layoutY="7.0" minHeight="0.0" minWidth="0.0" prefHeight="332.0" prefWidth="250.0">
+                  <children>
+                    <Label layoutX="8.0" layoutY="16.0" text="Agencia" />
+                    <Label layoutX="8.0" layoutY="98.0" text="Nome" />
+                    <Label layoutX="10.0" layoutY="67.0" text="Conta de Investimentos" />
+                    <Label layoutX="10.0" layoutY="41.0" text="Conta Corrente" />
+                    <Label layoutX="8.0" layoutY="129.0" text="CPF" />
+                    <Label layoutX="8.0" layoutY="161.0" text="RG" />
+                    <Label layoutX="8.0" layoutY="192.0" text="End.:" />
+                    <Label layoutX="9.0" layoutY="220.0" text="Cidade" />
+                    <Label layoutX="12.0" layoutY="246.0" text="Telefone:" />
+                    <TextField fx:id="inputAgencia" layoutX="62.0" layoutY="12.0" />
+                    <TextField fx:id="inputNome" layoutX="62.0" layoutY="94.0" />
+                    <TextField fx:id="inputCPF" layoutX="62.0" layoutY="125.0" />
+                    <TextField fx:id="inputRG" layoutX="62.0" layoutY="157.0" />
+                    <TextField fx:id="inputEnd" layoutX="62.0" layoutY="188.0" />
+                    <TextField fx:id="inputCidade" layoutX="62.0" layoutY="216.0" />
+                    <TextField fx:id="inputTelefone" layoutX="61.0" layoutY="243.0" />
+                    <CheckBox fx:id="boolCC" layoutX="108.0" layoutY="41.0" mnemonicParsing="false" />
+                    <CheckBox fx:id="boolCI" layoutX="145.0" layoutY="67.0" mnemonicParsing="false" />
+                    <Button fx:id="cadastrar" layoutX="47.0" layoutY="303.0" mnemonicParsing="false" text="Cadastrar" />
+                    <Button fx:id="cancelar" layoutX="166.0" layoutY="303.0" mnemonicParsing="false" text="Cancelar" />
+                  </children>
+                </AnchorPane>
+                <AnchorPane layoutX="262.0" layoutY="11.0" minHeight="0.0" minWidth="0.0" prefHeight="260.0" prefWidth="170.0">
+                  <children>
+                    <Label fx:id="outAgencia" layoutX="21.0" layoutY="14.0" />
+                    <Label fx:id="outCC" layoutX="21.0" layoutY="42.0" />
+                    <Label fx:id="outCI" layoutX="21.0" layoutY="67.0" />
+                    <Label fx:id="outNome" layoutX="21.0" layoutY="93.0" />
+                    <Label fx:id="outCPF" layoutX="21.0" layoutY="122.0" />
+                    <Label fx:id="outRG" layoutX="21.0" layoutY="154.0" />
+                    <Label fx:id="outTelefone" layoutX="21.0" layoutY="240.0" />
+                    <Label fx:id="outCidade" layoutX="21.0" layoutY="212.0" />
+                    <Label fx:id="outEnd" layoutX="21.0" layoutY="182.0" />
+                  </children>
+                </AnchorPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="tabInvest" text="Investimentos">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="420.0" prefWidth="971.0">
+              <children>
+                <Label layoutX="37.0" layoutY="62.0" text="Valor" />
+                <TextField fx:id="TextFieldDepositoCI" layoutX="145.0" layoutY="55.0" prefWidth="200.0" />
+                <Label layoutX="399.0" layoutY="21.0" text="Extrato bancario de Investimentos:" />
+                <Label layoutX="37.0" layoutY="24.0" text="Depósito:" />
+                <Label layoutX="31.0" layoutY="375.0" text="Saldo Poupança" />
+                <Label layoutX="29.0" layoutY="402.0" text="Saldo DI" />
+                <Label layoutX="32.0" layoutY="432.0" text="Saldo Tesouro Direto" />
+                <TextArea fx:id="TextAreaExtratoInvestimentos" layoutX="399.0" layoutY="47.0" prefHeight="172.0" prefWidth="381.0" wrapText="true" />
+                        <Button fx:id="buttonCIPoup" layoutX="39.0" layoutY="108.0" mnemonicParsing="false" text="Poupanca" />
+                        <Button fx:id="buttonCITesouro" layoutX="145.0" layoutY="108.0" mnemonicParsing="false" text="Tesouro" />
+                        <Button fx:id="buttonCIDI" layoutX="233.0" layoutY="108.0" mnemonicParsing="false" text="DI" />
+                        <Label layoutX="36.0" layoutY="190.0" text="Valor:" />
+                        <Label layoutX="27.0" layoutY="163.0" text="Transferencia" />
+                        <Label layoutX="29.0" layoutY="227.0" text="Destinatário:" />
+                        <TextField id="TextFieldSaldoCC" fx:id="textFieldValorCI" layoutX="145.0" layoutY="186.0" prefWidth="200.0" />
+                        <TextField id="TextFieldSaldoCC" fx:id="textFieldDestCI" layoutX="145.0" layoutY="223.0" prefWidth="200.0" />
+                        <Button fx:id="buttonCITransf" layoutX="134.0" layoutY="318.0" mnemonicParsing="false" text="Tranferencia" />
+                        <ButtonBar layoutX="7.0" layoutY="269.0" prefHeight="17.0" prefWidth="456.0">
+                           <buttons>
+                              <RadioButton fx:id="radioCICC" mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="ContaCorrente" />
+                              <RadioButton fx:id="radioCIPoup" minWidth="57.0" mnemonicParsing="false" prefHeight="9.0" text="Poupanca" />
+                              <RadioButton fx:id="radioCITesouro" mnemonicParsing="false" text="Tesouro" />
+                              <RadioButton fx:id="radioCIDI" mnemonicParsing="false" text="DI" />
+                           </buttons>
+                        </ButtonBar>
+                        <ButtonBar layoutX="32.0" layoutY="146.0" prefHeight="17.0" prefWidth="267.0">
+                           <buttons>
+                              <RadioButton fx:id="radioFromPoup" minWidth="57.0" mnemonicParsing="false" prefHeight="9.0" text="Poupanca" />
+                              <RadioButton fx:id="radioFromTesouro" mnemonicParsing="false" text="Tesouro" />
+                              <RadioButton fx:id="radioFromDI" mnemonicParsing="false" text="DI" />
+                           </buttons>
+                        </ButtonBar>
+                        <Label layoutX="20.0" layoutY="146.0" text="De:" />
+                        <Label layoutX="463.0" layoutY="302.0" text="Valor" />
+                        <TextField fx:id="TextFieldSaqueCI" layoutX="571.0" layoutY="295.0" prefWidth="200.0" />
+                        <Label layoutX="463.0" layoutY="264.0" text="Saque:" />
+                        <Button fx:id="buttonCIPoupSaque" layoutX="465.0" layoutY="348.0" mnemonicParsing="false" text="Poupanca" />
+                        <Button fx:id="buttonCITesouroSaque" layoutX="571.0" layoutY="348.0" mnemonicParsing="false" text="Tesouro" />
+                        <Button fx:id="buttonCIDISaque" layoutX="659.0" layoutY="348.0" mnemonicParsing="false" text="DI" />
+                        <Label layoutX="152.0" layoutY="375.0" text="R$" />
+                        <Label layoutX="152.0" layoutY="402.0" text="R$" />
+                        <Label layoutX="155.0" layoutY="432.0" text="R$" />
+                        <Label fx:id="labelSaldoP" layoutX="186.0" layoutY="375.0" />
+                        <Label fx:id="labelSaldoDI" layoutX="186.0" layoutY="402.0" />
+                        <Label fx:id="labelSaldoTes" layoutX="186.0" layoutY="432.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="tabCC" text="Conta Corrente">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="420.0" prefWidth="971.0">
+              <children>
+                <TextField fx:id="TextFieldValorDepSaqCC" layoutX="160.0" layoutY="75.0" prefWidth="200.0" />
+                <Label layoutX="424.0" layoutY="20.0" text="Extrato bancario de Conta Corrente:" />
+                <Label layoutX="45.0" layoutY="403.0" text="Saldo Conta Corrente:" />
+                <Label layoutX="19.0" layoutY="79.0" text="Depósito Conta Corrente:" />
+                <TextField id="TextFieldSaldoCC" fx:id="TextFieldTranferenciaValor" layoutX="162.0" layoutY="249.0" prefWidth="200.0" />
+                <Label layoutX="18.0" layoutY="225.0" text="Transferencia:" />
+                <Label layoutX="24.0" layoutY="257.0" text="Valor:" />
+                <TextField id="TextFieldSaldoCC" fx:id="TextFieldTranferenciaDestinatario" layoutX="162.0" layoutY="288.0" prefWidth="200.0" />
+                <Label layoutX="24.0" layoutY="294.0" text="Destinatário:" />
+                <Button fx:id="ButtonTransferencia" layoutX="178.0" layoutY="367.0" mnemonicParsing="false" text="Tranferencia" />
+                <Button fx:id="ButtonDepositar" layoutX="86.0" layoutY="146.0" mnemonicParsing="false" text="Depositar" />
+                <Button fx:id="ButtonSaque" layoutX="211.0" layoutY="146.0" mnemonicParsing="false" text="Saque" />
+                        <Label fx:id="labelSaldoCC" layoutX="189.0" layoutY="400.0" prefHeight="23.0" prefWidth="124.0" />
+                        <RadioButton fx:id="radioCC" layoutX="24.0" layoutY="338.0" mnemonicParsing="false" text="ContaCorrente" />
+                        <RadioButton fx:id="radioPoup" layoutX="123.0" layoutY="338.0" mnemonicParsing="false" text="Poupanca" />
+                        <RadioButton fx:id="radioTesouro" layoutX="219.0" layoutY="338.0" mnemonicParsing="false" text="Tesouro" />
+                        <RadioButton fx:id="radioDI" layoutX="317.0" layoutY="338.0" mnemonicParsing="false" text="DI" />
+                        <TextArea fx:id="textAreaCC" layoutX="419.0" layoutY="71.0" prefHeight="338.0" prefWidth="384.0" />
+                        <Label layoutX="164.0" layoutY="403.0" text="R$" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="tabGerente" text="Gerente">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="420.0" prefWidth="971.0">
+              <children>
+                <TextField fx:id="TextFieldPesquisaNome" layoutX="61.0" layoutY="39.0" prefWidth="290.0" />
+                <Label layoutX="18.0" layoutY="12.0" text="Pesquisar:" />
+                <Label layoutX="18.0" layoutY="45.0" text="Nome:" />
+                <Button fx:id="ButtonExcluirCadastro" layoutX="53.0" layoutY="340.0" mnemonicParsing="false" text="Excluir" />
+                <Label layoutX="15.0" layoutY="106.0" text="Agencia:" />
+                <Label layoutX="17.0" layoutY="135.0" text="Nome:" />
+                <Label layoutX="28.0" layoutY="169.0" text="CPF:" />
+                <Label layoutX="32.0" layoutY="201.0" text="RG:" />
+                <Label layoutX="28.0" layoutY="235.0" text="End.:" />
+                <Label layoutX="17.0" layoutY="265.0" text="Cidade:" />
+                <Label layoutX="14.0" layoutY="297.0" text="Telefone:" />
+                <TextField id="inputAgencia" fx:id="TextFieldPesquisaAgencia" layoutX="71.0" layoutY="102.0" />
+                <TextField id="inputNome" fx:id="TextFieldPesquisaNomeNovo" layoutX="72.0" layoutY="132.0" />
+                <TextField id="inputCPF" fx:id="TextFieldPesquisaCPF" layoutX="72.0" layoutY="163.0" />
+                <TextField id="inputRG" fx:id="TextFieldPesquisaRG" layoutX="72.0" layoutY="195.0" />
+                <TextField id="inputEnd" fx:id="TextFieldPesquisaEndereco" layoutX="72.0" layoutY="229.0" />
+                <TextField id="inputCidade" fx:id="TextFieldPesquisaCidade" layoutX="72.0" layoutY="259.0" />
+                <TextField id="inputTelefone" fx:id="TextFieldPesquisaTelefone" layoutX="72.0" layoutY="291.0" />
+                <Button fx:id="ButtonSalvarCadastro" layoutX="128.0" layoutY="340.0" mnemonicParsing="false" text="Salvar" />
+                        <Button fx:id="buttonClientes" layoutX="444.0" layoutY="27.0" mnemonicParsing="false" text="Clientes" />
+                        <Button fx:id="buttonGerentes" layoutX="599.0" layoutY="27.0" mnemonicParsing="false" text="Gerentes" />
+                        <Label fx:id="labelLista" layoutX="429.0" layoutY="92.0" prefHeight="189.0" prefWidth="258.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>
