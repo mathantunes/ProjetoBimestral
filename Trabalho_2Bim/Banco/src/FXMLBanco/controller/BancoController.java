@@ -9,22 +9,18 @@ import FXMLBanco.Banco;
 import FXMLBanco.Cliente;
 import FXMLBanco.Gerente;
 import java.net.URL;
-import java.util.Optional;
 import java.util.ResourceBundle;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TextInputDialog;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 
@@ -506,6 +502,10 @@ public class BancoController implements Initializable {
         this.outNome.setText("");
         this.outRG.setText("");
         this.outTelefone.setText("");
+        this.labelSaldoDI.setText("");
+        this.labelSaldoCC.setText("");
+        this.labelSaldoP.setText("");
+        this.labelSaldoTes.setText("");
     }
     private void verificaUsuario(String name){
         this.banco.verificaUsuario(name);
@@ -538,14 +538,13 @@ public class BancoController implements Initializable {
         alert.show();
     }
     private void logout(){
-        this.tabCC.setDisable(true);
-        this.tabCadastro.setDisable(true);
-        this.tabGerente.setDisable(true);
-        this.tabInvest.setDisable(true); 
+        disableTabs();
+        clearFields();
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Banco");
         alert.setContentText("Usuario Deslogado");
         alert.show();
+        
     }
     
 }
